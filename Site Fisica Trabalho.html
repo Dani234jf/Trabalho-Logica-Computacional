@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+  <head>
+    <title>Lógica computacional</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-solarizedlight.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  
+  <body>
+    <span class="material-symbols-rounded top-left-icon">school</span>
+    <div class="wrapper">
+      <div class="title">
+        <h1>Lógica computacional</h1>
+        <h4>Daniel Ferreira de Almeida</h4>
+        <h5>Escola Secundária de Tondela - Disciplina de Física</h5>
+      </div>
+      <div class="Introducao">
+        <div class="Introducao-Expandir">
+          <h2>Introdução</h2>
+          <span class="material-symbols-rounded expand-button" id="button-expand-up" onClick="SwitchIntroduction()">arrow_drop_up</span>
+          <span class="material-symbols-rounded expand-button" id="button-expand-down" onClick="SwitchIntroduction()">arrow_drop_down</span>
+        </div>
+        <div id="text-expand-section" class="text-part expand-text-part">
+          <p>A era da informática e da tecnologia já está presente nas nossas vidas de diversas formas, principalmente no surgimento de novos recursos e tecnologias. Aprender sobre lógica computacional melhora muito a resolução de problemas tecnológicos dentro de um sistema lógico.</p>
+          <p>A lógica computacional nada mais é do que a soma entre o raciocínio lógico e o uso de ou computação. Trata-se de um modo de pensar para desenvolver software ou para criar algoritmos.</p>
+          <p>A base por trás de todos os programas utilizados num computador, telemóvel, tablet ou outros dispositivos é a programação, realizada por meio de linguagens específicas feitas para os programadores conseguirem comunicar-se com as máquinas, como, por exemplo, C# ou Python, que são amplamente utilizadas no mercado entre outras.</p>
+          <p>A lógica computacional pode contribuir em vários aspetos, mas o principal é ajudar a desenvolver e expandir a forma como pensamos e percebemos o mundo. Isto aplica-se inclusive às tarefas, nas quais os algoritmos estão presentes de certa forma, exigindo um raciocínio lógico para a resolução de vários problemas.</p>
+          <p>O pensamento computacional, que utiliza a lógica como base, pode ser dividido em quatro fases:</p>
+          <ul>
+            <li> A decomposição do problema, separar a situação em várias partes menos complexas;</li>
+            <li> Reconhecimento de padrões: separar as categorias e identificar soluções específicas para cada uma;</li>
+            <li> Abstração: dividir o problema em questões mais simples e acentuadas, para ver além do problema;</li>
+            <li> Algoritmo: criar uma série de etapas para a resolução do problema.</li>
+          </ul>
+          <p>Esta separação em fases ajuda a pessoa a organizar as suas ações e o seu esforço, bem como o tempo gasto para a resolução de um problema. Desse modo, é possível alcançar a eficiência e conseguir resultados mais claros.</p>
+          <p>A lógica computacional possui várias vantagens, como por exemplo, o desenvolvimento cognitivo,  melhoria nos processos de aprendizagem e resolução de problemas, utilizando um pensamento organizado e objetivo.</p>
+          <p><strong>Exemplos</strong>:</p>
+          <p>Existem inúmeras linguagens de programação disponíveis, cada uma desenhada para cumprir um propósito específico. Algumas linguagens destacam-se em áreas particulares, como no desenvolvimento de websites, enquanto outras são mais adequadas para a criação de aplicações de software, por exemplo. É amplamente reconhecido que existem contextos e necessidades muito diversos no mundo da programação. Por essa razão, a variedade de linguagens de programação reflete a diversidade de situações e desafios que surgem, permitindo que os programadores escolham a ferramenta certa para cada tarefa.</p>
+          <p>Nesta parte do trabalho, irei utilizar como exemplo principal a linguagem de programação C#, amplamente utilizada no desenvolvimento de jogos, por exemplo.</p>
+        </div>
+      </div>
+      
+      <section>
+        <h2>Variáveis e Operadores</h2>
+        <div class="text-part">
+          <p>As variáveis são utilizadas para armazenar dados que podem ser manipulados pelo programa. Elas são nomeadas de forma a facilitar a compreensão e manipulação dos dados.</p>
+          <p>Operadores, por sua vez, permitem realizar operações sobre esses dados, como soma, subtração, comparação, etc. A combinação de variáveis e operadores é o que permite ao programador implementar a lógica desejada.</p>
+        </div>
+        <pre><code class="language-csharp">  int Variavel = 5;
+  
+  Variavel = Variavel * 2;
+  Variavel = Variavel + 5;</code></pre>
+
+        <pre><code class="language-csharp">  int Variavel = 5;
+
+  Variavel *= 2;
+  Variavel += 5;</code></pre> 
+        <pre><code class="language-csharp">  // Resultado = 15 </pre></code>
+        <pre><code class="language-csharp">  // Resultado = 20 (com inversão das operações)</pre></code>
+        <div class="text-part">
+          <p>Neste exemplo, podemos observar que, na primeira linha, foi criada uma variável chamada <span class="code">Variavel</span> contendo o número <span class="code">5</span>, com um valor de tipo inteiro <span class="code">int</span>.</p>
+          <p>A ordem é importante neste caso, pois, se multiplicarmos a variável por <span class="code">2</span> depois de lhe adicionarmos <span class="code">5</span>, o resultado seria diferente.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Condições</h2>
+        <div class="text-part">
+          <p>As condições permitem que o programa tome decisões baseadas em comparações ou verificações. O comando <span class="code">if/else</span> é uma das estruturas mais fundamentais, onde o programa executa diferentes blocos de código dependendo se uma condição é verdadeira ou falsa. </p>
+        </div>
+        <pre><code class="language-csharp">  int Variavel = 180;
+  string Resultado = "";
+  
+  if (Variavel > 200) { Resultado = "Maior que 200"; }
+  else { Resultado = "Menor que 200"; }</code></pre>    
+        <pre><code class="language-csharp">  // Resultado = "Menor que 200"</code></pre>
+        <div class="text-part">
+          <p>Este exemplo contém, na primeira linha, a criação de uma variável chamada <span class="code">Variavel</span> com o valor inteiro numérico <span class="code">180</span>. Na segunda linha, temos uma <span class="code">String</span> chamada <span class="code">Resultado</span>, que não contém nenhum valor. A <span class="code">String</span> é uma variável que armazena texto.</p>
+          <p>Nas linhas seguintes, estão presentes as condições mais usadas na lógica, que são <span class="code">If</span> e <span class="code">Else</span>. O <span class="code">If</span> contém a condição <span class="code">(Variavel > 200)</span>, o que nos indica que a linha à frente, entre parênteses retos, só será executada se a condição for verdadeira. Neste caso, a linha não será executada, pois <span class="code">180</span> não é maior que <span class="code">200</span>.</p>
+          <p>A próxima linha é composta pelo <span class="code">Else</span>, que é apenas executada quando o <span class="code">If</span> não é executado. Neste caso, esta função <span class="code">(Else)</span> é executada, alterando o valor da variável de texto para <span class="code">(Menor que 200)</span>, que é o resultado pretendido.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Loops</h2>
+        <div class="text-part">
+          <p>Os loops são utilizados para repetir uma série de instruções várias vezes, até que uma condição específica seja atendida. Eles são fundamentais quando é preciso processar grandes volumes de dados ou executar operações repetitivas.</p>
+          <p>Os loops mais comuns são <span class="code">for</span> e <span class="code">while</span> , cada um com as suas particularidades, mas todos são essenciais para a construção de programas eficientes.</p>
+        </div>
+        <pre><code class="language-csharp">  int Variavel = 0;
+  
+  for (int i = 0; i < 10; i++) { Variavel += 1; }</code></pre>
+      <pre><code class="language-csharp">  int Variavel = 0;
+  
+  for (int i = 0; i < 10; i++) // Nota: (i++) => (i = i+1)
+  { 
+    Variavel += 1; 
+  }</code></pre>    
+      <pre><code class="language-csharp">  // Variavel = 10   (pela condicao i > 10)</code></pre>
+      <pre><code class="language-csharp">  // Variavel = 100  (pela condicao i > 100)</code></pre>
+        <div class="text-part">
+          <p>Neste exemplo, os dois blocos de código fazem exatamente a mesma coisa. A única diferença entre eles é a forma como são escritos, o que muitas vezes facilita a compreensão do código e o simplifica em alguns casos. Como nos outros exemplos, existe uma variável chamada <span class="code">Variavel</span>, do tipo <span class="code">int</span>, com o valor <span class="code">0</span>.</p>
+          <p>Dentro do loop, a parte entre parênteses retos (lembrando que ambos os blocos de código têm aparências diferentes, mas são iguais) será executada 10 vezes. Em cada uma dessas repetições, a variável <span class="code">Variavel</span> aumenta <span class="code">1</span> valor. Como resultado, após <span class="code">10</span> iterações, o valor final de <span class="code">Variavel</span> será <span class="code">10</span>.</p>
+          <p>Se mudarmos a condição para <span class="code">(i > 100)</span>, o loop irá repetir <span class="code">100</span> vezes. Se mudarmos a última parte, para em vez de <span class="code">1</span> fazer <span class="code">2</span> incrementos <span class="code">(i += 2)</span> na variável <span class="code">i</span> o resultado seria de <span class="code">50</span>, pois iria de <span class="code">0</span> para <span class="code">2,4,6,8</span>etc, resultando na metade das vezes necessárias para chegar no valor <span class="code">i</span> de <span class="code">100</span> e assim acabar o loop. </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Funções</h2>
+        <div class="text-part">
+          <p>Funções em programação são blocos de código reutilizáveis que executam uma tarefa específica quando chamadas. Elas ajudam a organizar e modularizar o código, tornando-o mais eficiente e fácil de entender.</p>
+        </div>
+        <pre><code class="language-csharp">  int Resultado = 0; 
+
+  int Adição(int ValorA, int ValorB)
+  {
+    return ValorA + ValorB;
+  } 
+  
+  Resultado = Adição(5,6);</code></pre>  
+        <pre><code class="language-csharp">  int Resultado = 0;
+
+  int Adição(int ValorA, int ValorB) => ValorA + ValorB ;
+  
+  Resultado = Adição(5,6);</code></pre>  
+      <pre><code class="language-csharp">  // Resultado = 11 </code></pre>
+        <div class="text-part">
+          <p>Neste bloco de código, na primeira linha, podemos ver uma variável chamada <span class="code">Resultado</span> sendo criada com o valor de <span class="code">0</span>. Na segunda linha, foi criada uma função chamada <span class="code">Adição</span>. Antes do nome da função, foi colocado <span class="code">int</span>, o que significa que a função vai retornar um valor do tipo <span class="code">int</span>.</p>
+          <p>No entanto, poderia ser qualquer outro tipo, como <span class="code">bool</span>, <span class="code">string</span>, etc. Se a função não retornasse nenhum valor e fosse apenas uma lista de operações lógicas, poderíamos substituir o <span class="code">int</span> por <span class="code">void</span>. O termo <span class="code">void</span>, que significa nulo, indica que a função não retornará nenhum valor quando for chamada, apenas executará determinadas ações.</p>
+          <p>Esta função de adição possui dois números como valores de entrada. Neste caso, são dois valores do tipo <span class="code">int</span>, que serão utilizados a seguir. Dentro da função, podemos ver o <span class="code">return</span>, que significa que a função irá retornar um valor, que neste caso é a soma de dois números.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Valores de Entrada e Saída</h2>
+        <div class="text-part">
+          <p>O <span class="code">input</span> (valor de entrada), no contexto de um programa, refere-se a qualquer dado ou informação fornecida a um sistema ou programa para processamento. O <span class="code">input</span> pode vir de diversas fontes, como utilizadores, dispositivos de entrada, ficheiros ou até mesmo outros sistemas.</p>
+          <p>Existem vários tipos de <span class="code">input</span> que podem ser utilizados em sistemas de software. Os mais comuns incluem:</p>
+          <ul>
+            <li>Dados introduzidos pelo utilizador, como texto digitado em formulários, seleções feitas em menus ou cliques em botões.</li>
+            <li>Ficheiros, como documentos <span class="code">CSV</span> (dados em tabela) ou <span class="code">JSON</span>, que contêm dados estruturados e de fácil leitura.</li>
+            <li>Sensores ou dispositivos, que recolhem informações do ambiente e as enviam para processamento.</li>
+          </ul>
+          <p>Podemos também considerar programas simples, que interagem apenas com a consola, por exemplo.</p>
+        </div>        
+        <pre><code class="language-csharp">  int inputInt = 0;
+  
+  // Loop até ser gerado um valor válido
+  while (true) 
+  {
+      string input = Console.ReadLine(); // Input da Consola
+
+      if ( int.TryParse(input, out inputInt) ) { break; }
+      else { Console.WriteLine("[Erro]: O valor não é um número"); }
+  }
+
+  long GetFactorialNumber(int value) 
+  {
+      long result = 1;
+      for (int i = 0; i < inputInt; i++) { result *= (long) (i + 1) ;}
+      return result;
+  }
+  
+  // Output da Consola
+  Console.WriteLine($"{inputInt}! = { GetFactorialNumber(inputInt) }");</code></pre>  
+    <pre><code class="language-csharp">  // [Consola]:
+  // (input)   texto
+  // (output)  [Erro]: O valor não é um número
+  // (input)   5
+  // (output)  5! = 120</code></pre>
+      <div class="text-part">
+        <p>A primeira linha cria uma variável chamada <span class="code">inputInt</span> com valor inicial <span class="code">0</span>. A seguir, há um ciclo <span class="code">while</span> que repete até o utilizador escrever um número válido. A função <span class="code">Console.ReadLine()</span> lê o valor da consola, e o método <span class="code">int.TryParse()</span> verifica se esse valor, que é uma string, pode ser convertido para um número inteiro. Se for possível, o valor é guardado em <span class="code">inputInt</span>, caso contrário, aparece uma mensagem de erro na consola.</p>
+        <p>De seguida, é criada uma função chamada <span class="code">GetFactorialNumber</span>, que recebe um número inteiro e retorna o seu fatorial. Antes do nome da função está <span class="code">long</span>, indicando que o valor devolvido será um número inteiro longo. Dentro da função, um ciclo <span class="code">for</span> calcula o fatorial, multiplicando os números de 1 até ao valor recebido.</p>
+        <p>O resultado é então mostrado na consola, exibindo o número introduzido seguido do seu fatorial.</p>
+      </div>
+    </section>
+
+    <section class="nif">
+      <h2>Exemplo de Validação do NIF</h2>     
+      <pre><code class="language-csharp">  bool Nif(string nifNumber)
+  {
+      string filteredNumber = "";
+
+      for (int i = 0; i < nifNumber.Length ; i++) 
+      {
+          // discarta / filtra qualquer valor que nao seja um numero
+          if ( Char.IsNumber(nifNumber[i]) ) { filteredNumber += nifNumber[i]; }
+      }
+
+      // Obter primeiro digito do numero, index 0
+      int FirstValue = int.Parse(filteredNumber[0].ToString());
+
+      // Se o numero tiver um comprimento diferente de 9 ou
+      // se o primeiro digito for 0, é inválido
+      if (filteredNumber.Length != 9 || FirstValue == 0) { return false; }
+
+      int calculoCheckSum = 0;
+
+      for (int i = 0; i < 8; i++)
+      {
+          calculoCheckSum += (int.Parse(filteredNumber[i].ToString()))*(9 - i);
+          // i = 0, calculoCheckSum += 1ºdigit * 9
+          // i = 1, calculoCheckSum += 2ºdigit * 8
+      }
+
+      int digitoVerificacao = 11-(calculoCheckSum % 11);
+              
+      if (digitoVerificacao > 9) { digitoVerificacao = 0; }
+
+      // último número do Nif de index 8 na string (nº9 digito)
+      int digitoVerificaçãoNif = int.Parse(filteredNumber[8].ToString());
+
+      // Se o digito de verificação calculado for igual ao do Nif é válido
+      if ( digitoVerificacao == digitoVerificaçãoNif ) { return true; }
+      else { return false; }
+  }</code></pre>
+    <p class="text-footer">Código retirado da wikipedia (modificado) <a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_de_identifica%C3%A7%C3%A3o_fiscal" target="_blank" rel="noopener noreferrer">Número de identificação fiscal</a> </p>
+    <div class="text-part">
+      <p>A primeira linha cria uma função chamada <span class="code">Nif</span>, que retorna um valor <span class="code">bool</span> (verdadeiro ou falso). O propósito desta função é validar um número de NIF (Número de Identificação Fiscal).</p>
+      <p>A função recebe como entrada uma <span class="code">string</span> chamada <span class="code">nifNumber</span>, que contém o número de contribuinte. A primeira coisa que a função faz é percorrer os caracteres da string e guardar apenas os dígitos numéricos numa nova string chamada <span class="code">filteredNumber</span>. Qualquer carácter que não seja número é descartado.</p>
+      <p>De seguida, a função garante que o número tem 9 dígitos e que o primeiro dígito não é <span class="code">0</span>. Se não cumprir estas condições, a função retorna <span class="code">false</span>. Depois, a função calcula um valor chamado <span class="code">calculoCheckSum</span> somando os primeiros 8 dígitos, multiplicados por pesos específicos que vão de 9 até 2.</p>
+      <p>Com base nesse valor, é determinado o dígito de verificação (último dígito do NIF). Se o dígito de verificação calculado for maior que 9, é ajustado para 0.Por fim, a função compara o dígito de verificação calculado com o último dígito do NIF. Se forem iguais, a função retorna <span class="code">true</span>, indicando que o NIF é válido. Caso contrário, retorna <span class="code">false</span>.</p>
+    </div>
+    
+  </section>
+  
+    </div>
+    
+    <footer>  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+    
+  </body>
+</html>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+  .top-left-icon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    color: rgb(73, 73, 73);
+  }
+
+  section {
+    display: grid;
+    align-items: center;
+    padding: 1rem;
+    padding-top: 0rem;
+    padding-inline: auto;
+    border-radius: 0.5rem;
+    margin-block: 4rem;
+    box-shadow: 0px 0px 1rem 0px rgba(0,0,0,0.06);
+  }
+
+  section > * {
+    max-inline-size: 800px;
+    margin-inline: auto;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin: 0px;
+    text-shadow: 0px 0px 10rem rgb(0, 166, 255);
+  }
+
+  p, h1, h2, h4, h5, li {
+    font-family: "Roboto", "Sans-Serif";  
+    text-align: center;
+    color: rgb(10,10,10);
+  }
+
+  li {
+    text-align: start;
+    font-weight: 350; 
+    line-height: 2.3rem;
+  }
+
+  .expand-text-part {
+    max-inline-size: 800px;
+    padding-inline: auto;
+    padding-block: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 25px;
+  }
+
+  .function {
+    color: rgb(102, 110, 143) !important;
+  }
+
+  h4, h5 {
+    font-weight: 400;
+  }
+
+  h4 {
+    --margin-block-defaut: 2rem;
+    margin-block-start: var(--margin-block-defaut);
+    margin-block-end: calc(var(--margin-block-defaut) * 0.3);
+  }
+
+  h5 {
+    margin-block: 0rem;
+  }
+
+  .expand-button {
+    color: rgb(87, 87, 87);
+    border-radius: 5rem;
+    aspect-ratio: 1 / 1;
+    font-size: 42px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0.5rem rgba(0,0,0,0.1);
+    transition: color 0.1s ease-in, box-shadow 0.5s ease-out;
+  }
+
+  .expand-button:hover, :focus-visible {
+    color: rgb(16, 16, 16);
+    box-shadow: 0px 0px 0.75rem rgba(0,0,0,0.2);
+    transform: scale(1.03);
+    transition: color 0.1s ease-in, box-shadow 0.5s ease-out;
+  }
+
+  .expand-button:active {
+    color: rgb(133, 133, 133);
+  }
+
+  .code {
+    background-color: rgb(237, 237, 237);
+    border-radius: 1rem;
+    padding-inline: 0.3rem;
+    margin-inline: 0.2rem;
+    font-family: "Fira Code";
+    font-size: 0.9rem;
+    box-shadow: 0px 1px 0.1rem 0px rgba(0,0,0,0.1);
+  }
+
+  .title {
+    --margin-block-defaut: 5rem;
+    margin-block-start: var(--margin-block-defaut);
+    margin-block-end: calc(var(--margin-block-defaut) * 1.75);
+  }
+
+  .Introducao-Expandir {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    inline-size: 100%;
+  }
+
+  .Introducao {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 1rem 0px rgba(0,0,0,0.06);
+    padding-inline: 2rem;
+    padding-block: 1rem;
+
+    h2 {
+      font-size: 20px;
+      margin-block: 0;
+    }
+    span {
+      margin-inline-start: auto;
+    }
+  }
+
+  .text-part {
+    margin-block: 2.5rem;
+    padding-inline: auto;
+  }
+
+  p:not(.text-footer) {
+    font-weight: 350;
+    margin-inline: 0.5rem;  
+    line-height: 1.7rem;
+    text-align: start;
+  }
+
+  h2 {
+    margin-block: 3rem;
+    color: rgb(10,10,10);
+    font-weight: 600;
+    text-shadow: 0px 0px 1rem rgba(0,0,0,0.2);
+  }
+
+  .wrapper {
+    max-inline-size: 1100px;
+    margin-inline: auto;
+  }
+
+  .language-csharp {
+    border-radius: 0.5rem;
+  }
+
+  pre[class="language-csharp"] {
+      background-color: white !important;
+      box-shadow: 0px 0px 0.5rem 0px rgba(0,0,0,0.1);
+      margin-inline: auto;
+      max-inline-size: 300px;
+      min-inline-size: 70%;
+      font-size: 16px;
+  }
+
+  @media(max-width: 500px) {
+    pre[class="language-csharp"] {
+      font-size: 12px !important;
+    }
+    * {
+      font-size: 14px;
+    }
+  }
+
+  footer {
+    block-size: 5rem;
+  }
+
+  .text-footer {
+    font-weight: 400 !important;
+    color: rgb(55, 55, 55) !important;
+    font-size: 13px;
+    a {
+      text-decoration: none;
+      color: rgb(0, 93, 139);
+    }
+  }
+
+</style>
+
+<script>
+
+  const button_expand_down = document.getElementById("button-expand-down");
+  const button_expand_up = document.getElementById("button-expand-up");
+  const text_expand = document.getElementById("text-expand-section");
+  
+  let SectionExpanded = false;
+  
+
+  // comportamento inicial quando o site inicia
+
+  button_expand_up.style.display = "none"; // ocultar o butao com a seta para cima
+  button_expand_down.style.display = "inline"; // mostrar o butao com a seta para baixo
+  text_expand.style.display = "none"; // ocultar a parte do texto expansível
+
+  function SwitchIntroduction() {
+    SectionExpanded = !SectionExpanded;
+    UpdateStylesIntroduction();
+  }
+
+  function UpdateStylesIntroduction() {
+    if(!SectionExpanded) {
+      button_expand_up.style.display = "none";
+      button_expand_down.style.display = "inline";
+      text_expand.style.display = "none";
+    }
+    else {
+      button_expand_up.style.display = "inline";
+      button_expand_down.style.display = "none";
+      text_expand.style.display = "block";
+    }
+  }
+
+  const SubstituirLinhaCodigo = () => {
+    const paragraphs = document.querySelectorAll('p');
+
+    paragraphs.forEach(paragraph => {
+      let text = paragraph.innerHTML;
+
+      const regex = /`(.*?)`/g;
+
+      text = text.replace(regex, (match, p1) => { return `<span class="code">${p1}</span>`; });
+
+      paragraph.innerHTML = text;
+      });
+  }
+
+  SubstituirLinhaCodigo();
+
+</script>
